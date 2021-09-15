@@ -3,6 +3,7 @@ import { PrimaryButton } from "./components/atoms/button/PrimaryButton";
 import { SecondaryButton } from "./components/atoms/button/SecondaryButton";
 import { SearchInput } from "./components/molecules/SearchInput";
 import { UserCard } from "./components/organism/user/UserCard";
+import { DefaultLayout } from "./components/templates/DefaultLayout";
 import { HeaderOnly } from "./components/templates/HearderOnly";
 import "./styles.css";
 
@@ -20,13 +21,13 @@ const user = {
 export default function App() {
   return (
     <BrowserRouter>
-      <HeaderOnly>
+      <DefaultLayout>
         <PrimaryButton>Hello</PrimaryButton>
         <SecondaryButton>Search</SecondaryButton>
         <br />
         <SearchInput />
         <UserCard user={user} />
-      </HeaderOnly>
+      </DefaultLayout>
     </BrowserRouter>
   );
 }
